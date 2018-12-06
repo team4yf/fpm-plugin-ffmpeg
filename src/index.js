@@ -78,6 +78,7 @@ module.exports = {
             return 2;
           }
         }
+        delete watcher[streamId];
         const proc = subprocess[streamId]
         proc.kill('SIGHUP')
         delete subprocess[streamId]
