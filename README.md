@@ -32,6 +32,8 @@ yarn add fpm-plugin-ffmpeg
     /*
     streamId!
     */
+  - [ ] `info`
+  - [ ] `reset`
 ### Useage
 
 config.json

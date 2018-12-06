@@ -1,12 +1,12 @@
 {
   "name": "fpm-plugin-ffmpeg",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A Plugin Named [fpm-plugin-ffmpeg] For YF-FPM-SERVER~",
   "main": "lib/index.js",
   "scripts": {
     "compile": "./node_modules/.bin/babel -d lib/ src/",
     "prepublishOnly": "npm run compile",
-    "dev": "./node_modules/.bin/nodemon dev/dev.babel.js",
+    "dev": "./node_modules/.bin/nodemon dev/dev.js",
     "test": "./node_modules/.bin/mocha test/*.test.js"
   },
   "author": "yfsoftcom",

@@ -1,9 +1,9 @@
 'use strict';
-import { Fpm } from 'yf-fpm-server'
-import plugin from '../src'
+const { Fpm } = require('yf-fpm-server');
+const plugin = require('../src');
 let app = new Fpm()
 const ref = plugin.bind(app)
-console.info(ref)
+console.info('the plugin ref:', ref)
 let biz = app.createBiz('0.0.1');
 
 biz.addSubModules('test',{
