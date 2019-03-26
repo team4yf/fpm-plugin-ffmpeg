@@ -40,7 +40,7 @@ module.exports = {
           // opened
           return 1
         }
-        const pr = spawn( c.bin, `-rtsp_transport tcp -i ${ genProtocal(brand, user, pass, ip, ch) } -f flv -r 25 -s 1960*1280 -an rtmp://${ c.nginx }:1935/live/${ streamId }`.split(' '))
+        const pr = spawn( c.bin, `-rtsp_transport tcp -i ${ genProtocal(brand, user, pass, ip, ch) } -f flv -r 25 -s 1960*1280 -an rtmp://${ c.nginx }:1935/stream/${ streamId }`.split(' '))
         
         // pr.stderr.on('data', (data) => {
         //   fpm.logger.error(`stderr: ${data}`);

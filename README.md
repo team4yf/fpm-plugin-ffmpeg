@@ -3,7 +3,7 @@
 
 ### Install
 ```bash
-yarn add fpm-plugin-ffmpeg
+npm i fpm-plugin-ffmpeg -S
 ```
 
 ## Basic Info
