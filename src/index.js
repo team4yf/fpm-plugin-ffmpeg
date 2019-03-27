@@ -45,10 +45,21 @@ module.exports = {
         const pr = spawn( c.bin, cmd.split(' '))
         
         debug('RUN COMMAND: %O', cmd);
-        // pr.stderr.on('data', (data) => {
-        //   fpm.logger.error(`stderr: ${data}`);
-        // });
+        pr.stderr.on('data', (data) => {
+          debug('Stderr: %O', data.toString());
+        });
+        pr.on('error', (err) => {
+          debug('Failed to start subprocess: %O', err.toString());
+        });
 
+        pr.on('close', (code) => {
+          if (code !== 0) {
+            debug(`ps process exited with code ${code}`);
+          }else{
+            debug(`ps process exited successed!`);
+          }
+          
+        });
         subprocess[streamId] = pr
         return 1
       }

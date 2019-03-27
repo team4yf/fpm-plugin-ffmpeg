@@ -27,6 +27,7 @@ describe('Function', function(){
         done(err);
       })
   })
+  
 
   it('Function run', function(done){
     var func = new Func('ffmpeg.run');
@@ -38,7 +39,7 @@ describe('Function', function(){
         done(err);
       })
   })
-
+/*
   it('Function info', function(done){
     var func = new Func('ffmpeg.info');
     func.invoke({})
@@ -60,7 +61,7 @@ describe('Function', function(){
         done(err);
       })
   })
-
+//*/
   it('Function reset', function(done){
     var func = new Func('ffmpeg.reset');
     func.invoke({})
@@ -71,4 +72,5 @@ describe('Function', function(){
         done(err);
       })
   })
+  
 })
