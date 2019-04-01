@@ -67,7 +67,7 @@ module.exports = {
         // remove all;
         _.map(watcher, (v, k) => {
           const proc = subprocess[k];
-          proc.kill('SIGHUP')
+          proc.kill('SIGTERM')  // use sigterm for shutdown the process.
           delete subprocess[k];
           watcher[k] = 0;
         })
